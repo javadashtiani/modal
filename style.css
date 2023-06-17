@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-image: url("images/hero.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+}
+.body {
+  backdrop-filter: blur(7px);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container > .modalProject,
+.container > .modalContent {
+  background-color: #fff;
+  border-radius: 15px;
+  width: 600px;
+  height: 250px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.modalProject {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.modalProject > h1 {
+  color: rgb(16, 42, 66);
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.modalProject > .open {
+  background-color: rgb(73, 166, 233);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: 400;
+  margin-top: 32px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.modalProject > .open:hover {
+  background-color: transparent;
+  border: 1px solid rgb(73, 166, 233);
+  color: rgb(73, 166, 233);
+  backdrop-filter: blur(5px);
+}
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.modalContent > .close {
+  background-color: transparent;
+  align-self: flex-end;
+}
+.modalContent > .close:hover {
+  color: rgb(230, 107, 107);
+  transform: scale(1.3);
+}
+.modalContent > .close > i {
+  display: inline-block;
+  color: rgb(187, 37, 37);
+  font-size: 32px;
+  font-weight: 900;
+}
+.modalContent > h3 {
+  font-size: 28px;
+  color: rgb(16, 42, 66);
+  margin-top: 40px;
+}
+.hidden {
+  display: none;
+}
